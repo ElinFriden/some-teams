@@ -21,11 +21,9 @@ require(__DIR__ . '/data.php');
 
 </html>
 
-<!-- the base for the header, needs more work -->
-<header>
-    <div></div>
-    <nav></nav>
-</header>
+<?php
+require(__DIR__ . '/header.php');
+?>
 
 <!-- card for each team -->
 
