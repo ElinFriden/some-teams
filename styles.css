@@ -1,19 +1,28 @@
+:root {
+  --main-bg-color: #003249;
+  --main-text-color: #ccdbdc;
+  --main-contrast-color: #fc6471;
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
-  background-color: #003249;
+  background-color: var(--main-bg-color);
   font-family: Titillium Web;
 }
 
+body {
+  margin: 0 auto;
+  padding: 0 6rem;
+}
+
 main {
-  gap: 50px;
+  padding-top: 30px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 100px;
 }
 
 img {
@@ -21,6 +30,12 @@ img {
 }
 
 h2 {
+  font-size: calc(28rem / 16);
+  color: aliceblue;
+  margin: 0;
+}
+
+h3 {
   height: 10%;
   margin: 0;
   display: flex;
@@ -29,10 +44,29 @@ h2 {
   font-size: calc(20rem / 16);
 }
 
+p {
+  color: var(--main-contrast-color);
+  font-size: calc(20rem / 16);
+  margin: 0;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
 ul {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  gap: 40px;
+  padding: 20px 0 0 0;
 }
 
 .card {
@@ -51,7 +85,7 @@ ul {
 .card:hover {
   transform: scale(1.15);
   transition: 0.3s;
-  box-shadow: 0 0 4px 4px #80ced7;
+  box-shadow: 0 0 4px 4px var(--main-text-color);
 }
 
 .imgBackground {
@@ -59,7 +93,44 @@ ul {
   justify-content: center;
   align-items: center;
   background-color: #ccdbdc;
-  width: 75%;
-  height: 70%;
+  width: 175px;
+  height: 175px;
   border-radius: 10px;
+}
+
+/* css for header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  border-bottom: 1px solid #ccdbdc;
+}
+
+h1 {
+  font-size: calc(56rem / 16);
+  font-variant: small-caps;
+  color: var(--main-text-color);
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.navList a {
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+.navList a:hover {
+  color: var(--main-contrast-color);
 }

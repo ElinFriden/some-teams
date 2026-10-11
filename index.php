@@ -25,29 +25,36 @@ require(__DIR__ . '/data.php');
 require(__DIR__ . '/header.php');
 ?>
 
+
 <!-- card for each team -->
 
 <main>
-    <?php foreach ($teams as $team => $data):
-    ?>
-        <div class="card">
-            <div class="imgBackground">
-                <img src=" <?= $data['logo'] ?>" alt=" Team logo">
+    <div class="title">
+        <h2> UEFA women's Europa Cup 2026/27</h2>
+        <p>Round of 16</p>
+    </div>
+    <div class="cards">
+        <?php foreach ($teams as $team => $data):
+        ?>
+            <div class="card">
+                <div class="imgBackground">
+                    <img src=" <?= $data['logo'] ?>" alt=" Team logo">
+                </div>
+                <h3>
+                    <?= $team ?>
+                </h3>
+                <ul>
+                    <li>
+                        <?= $data['city'] ?>
+                    </li>
+                    <li>
+                        <?= $data['league'] ?>
+                    </li>
+                </ul>
             </div>
-            <h2>
-                <?= $team ?>
-            </h2>
-            <ul>
-                <li>
-                    <?= $data['city'] ?>
-                </li>
-                <li>
-                    <?= $data['league'] ?>
-                </li>
-            </ul>
-        </div>
-    <?php
-    endforeach;
-    ?>
+        <?php
+        endforeach;
+        ?>
+    </div>
 </main>
 </body>

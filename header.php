@@ -2,9 +2,9 @@
 <header>
     <h1>Some Teams</h1>
     <nav>
-        <ul>
-            <li> <a href="index.php">start</a> </li>
-            <li> <a href="about.php">about</a> </li>
+        <ul class="navList">
+            <li> <a href="index.php">Teams</a> </li>
+            <li> <a href="about.php">About me</a> </li>
         </ul>
     </nav>
 </header>
