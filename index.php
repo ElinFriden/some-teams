@@ -30,8 +30,8 @@ require(__DIR__ . '/header.php');
 
 <main>
     <div class="title">
-        <h2> UEFA women's Europa Cup 2026/27</h2>
-        <p>Round of 16</p>
+        <h1> UEFA women's Europa Cup 2026/27</h1>
+        <h2>Round of 16</h2>
     </div>
     <div class="cards">
         <?php foreach ($teams as $team => $data):
