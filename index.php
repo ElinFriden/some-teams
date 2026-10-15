@@ -35,10 +35,18 @@ require(__DIR__ . '/header.php');
     </div>
     <div class="cards">
         <?php foreach ($teams as $team => $data):
+            $logo = $data['logo'];
+
+            if ($team === 'Eintracht Frankfurt') {
+                $logo = $data['logo_uefa'];
+            }
+
         ?>
             <div class="card">
                 <div class="imgBackground">
-                    <img src=" <?= $data['logo'] ?>" alt=" Team logo">
+                    <img src=" <?= $logo ?>"
+                        onerror="this.onerror=null;this.src=' <?= $data['logo_uefa'] ?>'"
+                        alt=" Team logo">
                 </div>
                 <h3>
                     <?= $team ?>
