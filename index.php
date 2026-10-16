@@ -40,6 +40,9 @@ require(__DIR__ . '/header.php');
             if ($team === 'Eintracht Frankfurt') {
                 $logo = $data['logo_uefa'];
             }
+            if ($team === 'Czarni Sosnowiec') {
+                $logo = $data['logo_uefa'];
+            }
 
         ?>
             <div class="card">
