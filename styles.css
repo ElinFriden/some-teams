@@ -27,6 +27,7 @@ main {
 
 img {
   width: 100px;
+  object-fit: contain;
 }
 
 h1 {
@@ -83,12 +84,13 @@ ul {
   height: 350px;
   width: 220px;
   text-align: center;
+  transition: 0.3s;
+  position: relative;
 }
 
 .card:hover {
-  transform: scale(1.15);
-  transition: 0.3s;
-  box-shadow: 0 0 4px 4px var(--main-text-color);
+  transform: scale(1.09);
+  box-shadow: 0 0 3px 2px var(--main-text-color);
 }
 
 .imgBackground {
@@ -99,6 +101,22 @@ ul {
   width: 175px;
   height: 175px;
   border-radius: 10px;
+}
+
+.card.eliminated {
+  opacity: 0.5;
+}
+
+.card.eliminated::after {
+  content: "Eliminated";
+  height: 30px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: var(--main-contrast-color);
+  color: var(--main-text-color);
+  border-radius: 5px;
+  padding: 0 5px 0 5px;
 }
 
 /* css for header */
